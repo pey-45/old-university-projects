@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MyPatients</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="js/script.js" defer></script>
+        <script src="js/service.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>MyPatients</h1>
+        </header>
+        <main>
+            <section id="search-and-filters">
+                <h2>Patient search</h2>
+                <br>
+                <div id="search-and-filters-horizontal">
+                    <div id="patient-search">
+                        <form id="search-form">
+                            <fieldset>
+                                <legend>Search a patient</legend>
+                                <input 
+                                    type="text" 
+                                    id="patient-search-input" 
+                                    name="search" 
+                                    placeholder="Enter code (example: 123-4567-89)" 
+                                    required>
+                                <button type="button" id="search-button" aria-label="Search a patient">Search</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div id="filters">
+                        <form id="form-filters">
+                            <fieldset>
+                                <legend>Select a time period</legend>
+                                <select id="period" name="period" aria-label="Select a time period">
+                                    <option value="last-month" selected>Last month (default)</option>
+                                    <option value="last-days">Last days</option>
+                                    <option value="date-range">Date range</option>
+                                </select>
+                                
+                                <div id="last-days-options">
+                                    <label for="num-days">Days:</label>
+                                    <input type="number" id="num-days" name="num-days" min="1" max="365" value="7">
+                                </div>
+                                
+                                <div id="date-range-options">
+                                    <div>
+                                        <label for="start-date">From:</label>
+                                        <input type="date" id="start-date" name="start-date">
+                                    </div>
+                                    <div>
+                                        <label for="end-date">To:</label>
+                                        <input type="date" id="end-date" name="end-date">
+                                    </div>
+                                </div>
+                                <button type="submit">Apply</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="patient-name">
+                <h3>Patient: <span id="patient-data-span"></span></h3>
+            </section>
+            
+            <section id="report" aria-live="assertive">
+                <h2>Medication report</h2>
+                <br>
+                <div id="content-resume">
+                    <div id="loading-indicator" style="display: none;" role="status" aria-live="polite">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>IPM 24/25</p>
+        </footer>
+    </body>
+</html>

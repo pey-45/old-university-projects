@@ -1,0 +1,195 @@
+# Galician translations for ipm package.
+# Copyright (C) 2024 THE ipm'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the ipm package.
+# hugo <hugo@hugo>, 2024.
+
+msgid "__lang__"
+msgstr "gl_ES"
+
+msgid ""
+msgstr ""
+
+"Project-Id-Version: ipm 2425-p_escritorio-triana-2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-09 19:28+0100\n"
+"PO-Revision-Date: 2024-11-09 19:33+0100\n"
+"Last-Translator: hugo <hugo@hugo>\n"
+"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language: gl_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+
+### PRESENTER ###
+
+msgid "Medical Center"
+msgstr "Centro Médico"
+
+msgid "Search"
+msgstr "Procurar"
+
+msgid "About"
+msgstr "Sobre"
+
+msgid "Search a patient"
+msgstr "Procurar un paciente"
+
+msgid "\tMedication"
+msgstr "\tMedicación"
+
+msgid "\tDosage"
+msgstr "\tDose"
+
+msgid "\tStart date"
+msgstr "\tData de inicio"
+
+msgid "\tDuration"
+msgstr "\tDuración"
+
+msgid "\tPosology\t"
+msgstr "\tPosoloxía\t"
+
+msgid "Add medication"
+msgstr "Engadir medicación"
+
+msgid "Delete medication"
+msgstr "Eliminar medicación"
+
+msgid "Name:"
+msgstr "Nome:"
+
+msgid "Dosage:"
+msgstr "Dose:"
+
+msgid "Start date:"
+msgstr "Data de inicio:"
+
+msgid "Duration:"
+msgstr "Duración:"
+
+msgid "Posology:"
+msgstr "Posoloxía:"
+
+msgid "MM-DD-YYYY"
+msgstr "DD-MM-AAAA"
+
+msgid "days"
+msgstr "días"
+
+msgid "   Save   "
+msgstr "  Gardar  "
+
+msgid "Discard"
+msgstr "Descartar"
+
+msgid "Medication Center App"
+msgstr "Aplicación do Centro de Medicación"
+
+msgid "Edit medication"
+msgstr "Editar medicación"
+
+msgid "Confirm Deletion"
+msgstr "Confirmar Eliminación"
+
+msgid "Are you sure you want to delete the medication "
+msgstr "Estás seguro de que queres eliminar a medicación "
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Delete"
+msgstr "Eliminar"
+
+msgid "Medication name is mandatory"
+msgstr "O nome da medicación é obrigatorio"
+
+msgid "Medication dosage must be a positive integer or decimal"
+msgstr "A dose debe ser un número positivo ou decimal"
+
+msgid "Medication start date is mandatory"
+msgstr "A data de inicio da medicación é obrigatoria"
+
+msgid ""
+"Medication start date has an invalid format:\n"
+"expected 'MM-DD-YYYY'"
+msgstr ""
+"A data de inicio da medicación ten un formato incorrecto:\n"
+"esperado 'DD-MM-AAAA'"
+
+msgid "Medication dosage must be a positive integer"
+msgstr "A dose da medicación debe ser un número enteiro positivo"
+
+msgid ""
+"Medication posologies has an invalid format:\n"
+"expected 'hh:mm, hh:mm, ...'"
+msgstr ""
+"As posoloxías teñen un formato incorrecto:\n"
+"esperado 'hh:mm, hh:mm, ...'"
+
+msgid "Close"
+msgstr "Pechar"
+
+msgid "Error"
+msgstr "Erro"
+
+msgid "Ok"
+msgstr "Vale"
+
+
+### PRESENTER ###
+
+msgid "Specify a patient code"
+msgstr "Especifique un código de paciente"
+
+
+### MODEL ###
+
+msgid "Connection error"
+msgstr "Erro de conexión"
+
+msgid "Connection timed out"
+msgstr "Tempo de espera esgotado"
+
+msgid "Something went wrong"
+msgstr "Algo saiu mal"
+
+msgid "Failed to add patient"
+msgstr "Erro ao engair paciente"
+
+msgid "Patients not found"
+msgstr "Pacientes non atopados"
+
+msgid "Patient not found"
+msgstr "Paciente non atopado"
+
+msgid "Failed to update patient"
+msgstr "Erro ao actualizar o paciente"
+
+msgid "Failed to delete patient"
+msgstr "Erro ao eliminar o paciente"
+
+msgid "Failed to add medication"
+msgstr "Erro ao engadir a medicación"
+
+msgid "Medications not found"
+msgstr "Medicacións non atopadas"
+
+msgid "Failed to update medication"
+msgstr "Erro ao actualizar a medicación"
+
+msgid "Failed to delete medication"
+msgstr "Erro ao eliminar a medicación"
+
+msgid "Failed to add posology"
+msgstr "Erro ao engadir a posoloxía"
+
+msgid "Posologies not found"
+msgstr "Posoloxías non atopadas"
+
+msgid "Failed to update posology"
+msgstr "Erro ao actualizar a posoloxía"
+
+msgid "Failed to delete posology"
+msgstr "Erro ao eliminar a posoloxía"
+

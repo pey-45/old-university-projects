@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+button,
+input,
+select {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: darkslategray;
+}
+
+body {
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+
+button { 
+    padding: 0.5em 1em;
+    background-color: darkslategray;
+    color: white;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4b4b4b;
+}
+
+header {
+    background-color: darkslategray;
+    color: white;
+    padding: 1.5em;
+    text-align: center;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+
+main {
+    padding: 1em;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: block !important;
+}
+
+#search-and-filters-horizontal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+}
+
+#filters, #patient-search {
+    margin-bottom: 1em;
+}
+
+#filters h2, #patient-search h2 {
+    color: #333;
+    margin-bottom: 1em;
+}
+
+form fieldset {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: white;
+}
+
+form legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+    color: darkslategray;
+}
+
+form select,
+form input[type="number"],
+form input[type="date"],
+form input[type="text"] {
+    width: 100%;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+form input[type="date"] {
+    background-color: #f0f0f0;
+}
+
+form input[type="date"]:focus {
+    background-color: #fff;
+    border-color: darkslategray;
+}
+
+.hidden-options {
+    display: none;
+    margin-top: 1rem;
+}
+
+#patient-name {
+    margin-bottom: 1em;
+    padding: 0.5em;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+}
+
+#search-results ul {
+    padding-left: 1.5em;
+    margin: 0.5em 0;
+}
+
+#search-results ul li {
+    margin-bottom: 0.3em;
+    line-height: 1.5;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    color: darkslategray;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.75em;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #5e5e5e;
+}
+
+td {
+    color: #707070;
+}
+
+.taken {
+    color: green;
+}
+
+.not-taken {
+    color: red;
+}
+
+/* Estilos para el informe */
+#report {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1em;
+    margin-top: 2em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.medication {
+    margin-bottom: 2em;
+}
+
+.medication h3 {
+    color: darkslategray;
+    margin-bottom: 0.5em;
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 0.5em;
+    }
+
+    form select,
+    form input[type="number"],
+    form input[type="date"],
+    form input[type="text"],
+    button {
+        width: 100%;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+
+    main {
+        padding: 1em;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 769px) {
+    body {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 2em;
+        max-width: 1200px;
+    }
+}

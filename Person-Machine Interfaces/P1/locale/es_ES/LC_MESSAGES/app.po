@@ -1,0 +1,197 @@
+# Spanish translations for ipm package.
+# Copyright (C) 2024 THE ipm'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the ipm package.
+# felino <felino@felino-virtualbox>, 2024.
+
+msgid "__lang__"
+msgstr "es_ES"
+
+msgid ""
+msgstr ""
+
+"Project-Id-Version: ipm 2425-p_escritorio-triana\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-09 17:51+0100\n"
+"PO-Revision-Date: 2024-11-09 17:51+0100\n"
+"Last-Translator: felino <felino@felino-virtualbox>\n"
+"Language-Team: Spanish <es@tp.org.es>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+
+### VIEW ###
+
+msgid "Medical Center"
+msgstr "Centro Médico"
+
+msgid "Search"
+msgstr "Buscar"
+
+msgid "About"
+msgstr "Acerca de"
+
+msgid "Search a patient"
+msgstr "Buscar un paciente"
+
+msgid "\tMedication"
+msgstr "\tMedicación"
+
+msgid "\tDosage"
+msgstr "\tDosis"
+
+msgid "\tStart date"
+msgstr "\tFecha de inicio"
+
+msgid "\tDuration"
+msgstr "\tDuración"
+
+msgid "\tPosology\t"
+msgstr "\tPosología\t"
+
+msgid "Add medication"
+msgstr "Añadir medicación"
+
+msgid "Delete medication"
+msgstr "Eliminar medicación"
+
+msgid "Name:"
+msgstr "Nombre:"
+
+msgid "Dosage:"
+msgstr "Dosis:"
+
+msgid "Start date:"
+msgstr "Fecha de inicio:"
+
+msgid "Duration:"
+msgstr "Duración:"
+
+msgid "Posology:"
+msgstr "Posología:"
+
+msgid "MM-DD-YYYY"
+msgstr "DD-MM-AAAA"
+
+msgid "days"
+msgstr "días"
+
+msgid "   Save   "
+msgstr "  Guardar  "
+
+msgid "Discard"
+msgstr "Descartar"
+
+msgid "Medication Center App"
+msgstr "Aplicación de Centro de Medicación"
+
+msgid "Edit medication"
+msgstr "Editar medicación"
+
+msgid "Confirm Deletion"
+msgstr "Confirmar Eliminación"
+
+msgid "Are you sure you want to delete the medication "
+msgstr "Estás seguro de que quieres eliminar la medicación "
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Delete"
+msgstr "Eliminar"
+
+msgid "Medication name is mandatory"
+msgstr "El nombre de la medicación es obligatorio"
+
+msgid "Medication dosage must be a positive integer or decimal"
+msgstr "La dosis de la medicación debe ser un número entero o decimal positivo"
+
+msgid "Medication start date is mandatory"
+msgstr "La fecha de inicio de la medicación es obligatoria"
+
+msgid ""
+"Medication start date has an invalid format:\n"
+"expected 'MM-DD-YYYY'"
+msgstr ""
+"La fecha de inicio de la medicación tiene un formato inválido:\n"
+"se esperaba 'DD-MM-AAAA'"
+
+msgid "Medication dosage must be a positive integer"
+msgstr "La dosis de la medicación debe ser un número entero positivo"
+
+msgid ""
+"Medication posologies has an invalid format:\n"
+"expected 'hh:mm, hh:mm, ...'"
+msgstr ""
+"Las posologías de la medicación tienen un formato inválido:\n"
+"se esperaba 'hh:mm, hh:mm, ...'"
+
+msgid "Close"
+msgstr "Cerrar"
+
+msgid "Error"
+msgstr "Error"
+
+msgid "Ok"
+msgstr "Vale"
+
+
+### PRESENTER ###
+
+msgid "Specify a patient code"
+msgstr "Especifique un código de paciente"
+
+
+### MODEL ###
+
+msgid "Connection error"
+msgstr "Error de conexión"
+
+msgid "Connection timed out"
+msgstr "Tiempo de espera agotado"
+
+msgid "Something went wrong"
+msgstr "Algo salió mal"
+
+msgid "Failed to add patient"
+msgstr "Error al añadir paciente"
+
+msgid "Patients not found"
+msgstr "Pacientes no encontrados"
+
+msgid "Patient not found"
+msgstr "Paciente no encontrado"
+
+msgid "Failed to update patient"
+msgstr "Error al actualizar paciente"
+
+msgid "Failed to delete patient"
+msgstr "Error al eliminar paciente"
+
+msgid "Failed to add medication"
+msgstr "Error al añadir medicación"
+
+msgid "Medications not found"
+msgstr "Medicaciones no encontradas"
+
+msgid "Failed to update medication"
+msgstr "Error al actualizar medicación"
+
+msgid "Failed to delete medication"
+msgstr "Error al eliminar medicación"
+
+msgid "Failed to add posology"
+msgstr "Error al añadir posología"
+
+msgid "Posologies not found"
+msgstr "Posologías no encontradas"
+
+msgid "Failed to update posology"
+msgstr "Error al actualizar posología"
+
+msgid "Failed to delete posology"
+msgstr "Error al eliminar posología"
+
+
