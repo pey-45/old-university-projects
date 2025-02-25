@@ -1,0 +1,53 @@
+Informe realizado por:
+
+	Nombres:
+		- Pablo Manzanares López
+		- Alejandro Rodríguez Franco
+		- Carlos Pérez Cambeiro
+	Logins:
+		- pablo.manzanares.lopez@udc.es
+		- alejandro.rodriguezf@udc.es
+		- carlos.perez.cambeiro@udc.es
+
+
+Introducción:
+
+	El objetivo de esta práctica es valorar la eficacia del algoritmo de dijkstra, así como su comportamiento
+    con distintas ordenaciones iniciales.
+    Este algoritmo sirve para encontrar los caminos más cortos entre los puntos de un grafo estando todos conectados
+    entre sí.
+	Nosotros decidimos ejecutar el algoritmo 3 veces para contrastar resultados y obtener tiempos más precisos.
+
+	Para estas medidas, hemos utilizado un portátil con las siguientes características:
+
+		- CPU: 11th Gen Intel® Core™ i3-1115G4 @ 3.00GHz × 4
+		- SSD: 256.1GB
+		- RAM: 8GiB RAM
+		- SO: Ubuntu 20.04.3 LTS
+
+	Medición de tiempos: µs.
+	Si t(n) < 500 µs entonces se marca con (*) y el tiempo se calcula con la media de K=1000 ejecuciones.
+
+
+Tabla de resultados:
+
+        n              t(n)        t/n^2.7500        t/n^2.9500        t/n^3.1500        t/n^3.0000
+(*)    32         22.961000          0.001667          0.000833          0.000417          0.000701
+       64       2480.000000          0.026758          0.011647          0.005070          0.009460
+      128      18089.000000          0.029013          0.010994          0.004166          0.008626
+      256     144428.000000          0.034434          0.011359          0.003747          0.008609
+      512    1081565.000000          0.038332          0.011008          0.003161          0.008058
+                                  Subestimada          Ajustada     Sobreestimada           Teórica
+                                                     Cte: 0.011
+
+      - Existe una anomalía con n=32.
+      - n^2.75 es una cota subestimada ya que t/n^2.75 tiende a infinito.
+      - n^2.95 es una cota ajustada ya que t/n^2.95 tiende a 0.011.
+      - n^3.15 es una cota sobreestimada ya que t/n^3.15 tiende a cero.
+      - n^3 es la cota teórica.
+
+
+Conclusiones:
+
+	 - Esta implementación del algoritmo dijkstra tiene complejidad cúbica O(n^3).
+	 - La cota ajustada que hemos obtenido empíricamente es ligeramente inferior a la cota teórica.

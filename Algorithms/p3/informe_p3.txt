@@ -1,0 +1,94 @@
+Informe realizado por: 
+
+	Nombres:
+		- Pablo Manzanares López
+		- Alejandro Rodríguez Franco
+		- Carlos Pérez Cambeiro
+	Logins:
+		- pablo.manzanares.lopez@udc.es
+		- alejandro.rodriguezf@udc.es
+		- carlos.perez.cambeiro@udc.es
+
+
+Introducción:
+
+	El objetivo de esta práctica es valorar la eficacia del algoritmo de ordenación por montículos, así como su comportamiento 
+    con distintas ordenaciones iniciales.
+
+	Para las medidas, hemos utilizado un portátil con las siguientes características:
+
+		- CPU: 11th Gen Intel® Core™ i3-1115G4 @ 3.00GHz × 4
+		- SSD: 256.1GB
+		- RAM: 8GiB RAM  
+		- SO: Ubuntu 20.04.3 LTS
+
+	Medición de tiempos: µs.
+	Si t(n) < 500 µs entonces se marca con (*) y el tiempo se calcula con la media de K=1000 ejecuciones.
+
+
+Tabla de resultados y análisis:
+
+       --------------
+         Ascendente
+       --------------
+
+             n              t(n)        t/n^1.8000        t/n^2.0000        t/n^2.2000
+           500        831.000000          0.011520          0.003324          0.000959
+          1000       2542.000000          0.010120          0.002542          0.000639
+          2000      10887.000000          0.012447          0.002722          0.000595
+          4000      41724.000000          0.013699          0.002608          0.000496
+          8000     173237.000000          0.016333          0.002707          0.000449
+         16000     706053.000000          0.019117          0.002758          0.000398
+         32000    2760731.000000          0.021466          0.002696          0.000339
+                                       Subestimada          Ajustada     Sobreestimada
+                                                         Cte: 0.0028
+
+	    - n^1.8 es una cota subestimada ya que t/n^1.8 tiende a infinito.
+	    - n^2.2 es una cota sobreestimada ya que t/n^2.2 tiende a cero.
+	    - n^2 es una cota ajustada ya que t/n^2 tiende a 0.0028.
+
+       ---------------
+         Desordenado
+       ---------------
+
+             n              t(n)        t/n^1.8000        t/n^2.0000        t/n^2.2000
+           500        837.000000          0.011603          0.003348          0.000966
+          1000       3466.000000          0.013798          0.003466          0.000871
+          2000      14328.000000          0.016381          0.003582          0.000783
+          4000      55180.000000          0.018116          0.003449          0.000657
+          8000     218645.000000          0.020615          0.003416          0.000566
+         16000     889143.000000          0.024074          0.003473          0.000501
+         32000    3614086.000000          0.028101          0.003529          0.000443
+                                       Subestimada          Ajustada     Sobreestimada
+                                                         Cte: 0.0035
+
+	    - n^1.8 es una cota subestimada ya que t/n^1.8 tiende a infinito.
+	    - n^2.2 es una cota sobreestimada ya que t/n^2.2 tiende a cero.
+	    - n^2 es una cota ajustada ya que t/n^2 tiende a 0.0035.
+
+       ---------------
+         Descendente
+       ---------------
+
+             n              t(n)        t/n^1.8000        t/n^2.0000        t/n^2.2000
+           500       1051.000000          0.014570          0.004204          0.001213
+          1000       4198.000000          0.016713          0.004198          0.001054
+          2000      16028.000000          0.018324          0.004007          0.000876
+          4000      66066.000000          0.021691          0.004129          0.000786
+          8000     255064.000000          0.024048          0.003985          0.000660
+         16000    1015851.000000          0.027505          0.003968          0.000572
+         32000    4090989.000000          0.031810          0.003995          0.000502
+                                       Subestimada          Ajustada     Sobreestimada
+                                                         Cte: 0.0040
+
+	    - n^1.8 es una cota subestimada ya que t/n^1.8 tiende a infinito.
+	    - n^2.2 es una cota sobreestimada ya que t/n^2.2 tiende a cero.
+	    - n^2 es una cota ajustada ya que t/n^2 tiende a 0.0040.
+
+
+Conclusiones:
+
+    - La complejidad tanto teórica como empírica de este algoritmo para cualquier 
+      arreglo inicial es de O(n^2).
+    - El peor y el mejor caso de este algoritmo ocurre cuando está ordenado de forma 
+       descendente y ascendente, respectivamente.
