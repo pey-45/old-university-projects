@@ -1,0 +1,79 @@
+### ADD COURSE ###
+
+# OK
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-addCourse 'A Coruña' 'Educación Infantil' '2025-08-15T11:00' 150 2"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-addCourse 'Santiago' 'Ofimática' '2025-09-25T11:00' 80 10"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-addCourse 'A Coruña' 'Jardinería' '2025-10-20T11:00' 100 5"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-addCourse 'A Coruña' 'Nutrición' '2025-10-25T11:00' 100 10"
+
+# INVALID
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-addCourse ' ' 'Celador' '2025-08-14T11:00' 100 10"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-addCourse 'Santiago' ' ' '2025-08-14T11:00' 100 10"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-addCourse 'Santiago' 'Celador' '2024-08-14T11:00' 100 10"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-addCourse 'Santiago' 'Celador' '2025-08-14T11:00' -2 10"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-addCourse 'Santiago' 'Celador' '2025-08-14T11:00' 100 0"
+
+
+
+### REGISTER FOR COURSE ###
+
+# OK
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-register 'user1@udc.es' 1 '0123456789111111'"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-register 'user2@udc.es' 1 '0123456789222222'"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-register 'user1@udc.es' 3 '0123456789111111' "
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-register 'user3@udc.es' 4 '0123456789333333'"
+
+# INVALID
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-register 'user3@udc.es' 1 '0123456789333333'"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-register 'user4@udc.es' 9 '0123456789444444'"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-register 'user4@udc.es' 2 '0123456789'"
+
+# SQL SENTENCE
+mysql -u ws --password=ws ws
+UPDATE Course SET startDate='2024-10-25 11:00' WHERE courseId=4;
+exit
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-register 'user4@udc.es' 4 '0123456789333333'"
+
+
+
+### CANCEL REGISTRATION ###
+
+# OK
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-cancelRegistration 3 'user1@udc.es'"
+
+# INVALID
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-cancelRegistration 3 'user1@udc.es'"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-cancelRegistration 4 'user3@udc.es'"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-cancelRegistration 2 'user1@udc.es'"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-cancelRegistration 9 'user2@udc.es'"
+
+
+
+### FIND COURSES BY CITY ###
+
+# OK
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-findCourses 'A Coruña'"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-findCourses 'Santiago'"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-findCourses 'Ferrol'"
+
+# INVALID
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-findCourses ' '"
+
+
+
+### FIND COURSE BY ID ###
+
+# OK
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-findCourse 4"
+
+# INVALID
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-findCourse 9"
+
+
+
+### FIND INSCRIPTIONS FROM EMAIL ###
+
+# OK
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-findRegistrations 'user1@udc.es'"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-findRegistrations 'user2@udc.es'"
+mvn exec:java -D"exec.mainClass"="es.udc.ws.app.client.ui.AppServiceClient" -D"exec.args"="-findRegistrations 'user6@udc.es'"

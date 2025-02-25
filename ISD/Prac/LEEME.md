@@ -1,0 +1,12 @@
+- (18-10-2024) MauriL28: [VARIOS] Empezado model, y creada clase Curso
+- (21-10-2024) MauriL28: [FUNC-1][FUNC-2] Hechos metodos addCurso y findCursos
+- (21-10-2024) joelcastrelo: [FUNC-3] Funcionalidad 3
+- (26-10-2024) pey-45: [VARIOS] Added Inscription class, interface and create function. Irrelevant refactors.
+- (26-10-2024) pey-45: [VARIOS] Code language changed to English
+- (27-10-2024) pey-45: [FUNC-5] Functionality 5 finished without revision
+- (27-10-2024) pey-45: [VARIOS] Added validations in class constructors
+- (27-10-2024) pey-45: [FUNC-6] General changes and functionality 6 finished without revision
+- (27-10-2024) pey-45: [VARIOS] Amend for minimal change
+- (27-10-2024) joelcastrelo: [VARIOS] tabla inscripcion
+- (27-10-2024) joelcastrelo: [FUNC-4] funcionalidad 4
+- (27-10-2024) pey-45: [VARIOS] Combine all services in one
